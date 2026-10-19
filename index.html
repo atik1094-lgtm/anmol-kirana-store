@@ -19,6 +19,78 @@
 .float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#16a05e;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 4px 18px #0003;z-index:10}
 @media(max-width:900px){.header{flex-direction:column;gap:15px;text-align:center}.header-mid{flex-wrap:wrap;justify-content:center}.grid{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:repeat(2,1fr);gap:15px}.feature{border-right:0}.contact{grid-template-columns:1fr 1fr}.hero h2{font-size:44px}}
 @media(max-width:620px){.top{font-size:11px;height:auto;padding:7px 12px}.brand h1{font-size:38px}.brand h1 small{font-size:16px}.nav a{padding:10px 8px;font-size:12px}.hero{min-height:360px;padding:30px 22px;background-position:60% center}.welcome{font-size:30px}.hero h2{font-size:38px}.hero .lead{font-size:15px}.grid{grid-template-columns:1fr;padding:0 12px}.features,.contact{grid-template-columns:1fr;padding-left:12px;padding-right:12px}.divider{display:none}.location{max-width:none}.footer{flex-direction:column;gap:8px;text-align:center}}
+
+/* Mobile-first layout improvements */
+img{max-width:100%}
+body{overflow-x:hidden}
+@media (max-width:900px){
+  .header{padding:18px 20px}
+  .brand{justify-content:center}
+  .header-mid{width:100%;gap:12px}
+  .location{flex:1;min-width:240px}
+  .hero{background-position:center;min-height:300px}
+  .grid,.features,.contact{max-width:100%}
+}
+@media (max-width:620px){
+  .top{display:block;text-align:center;padding:9px 10px;line-height:1.5}
+  .top>div:first-child{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 8px}
+  .top span{margin:0}
+  .lang{display:none}
+  .header{padding:16px 14px;gap:16px}
+  .brand{gap:10px;width:100%}
+  .leaf{width:42px;height:42px;flex:0 0 42px}
+  .leaf:after{height:36px;width:4px;left:19px;top:4px}
+  .brand h1{font-size:36px;line-height:.95;letter-spacing:0}
+  .brand h1 small{font-size:13px;letter-spacing:2px;margin-top:5px}
+  .brand p{font-size:11px;letter-spacing:.3px;margin-top:5px}
+  .header-mid{display:grid;grid-template-columns:38px 1fr;gap:5px 10px;text-align:left;align-items:center}
+  .wa-icon{font-size:30px;grid-row:1}
+  .header-mid>div:nth-child(2){min-width:0}
+  .header-mid strong{font-size:17px}
+  .header-mid small{font-size:12px;line-height:1.4}
+  .divider{display:none}
+  .location{grid-column:1 / -1;min-width:0;max-width:none;padding-top:10px;border-top:1px solid #e5e9e3}
+  .pin{font-size:22px}
+  .nav{display:flex;flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;overscroll-behavior-x:contain;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .nav a{flex:0 0 auto;padding:13px 14px;font-size:13px}
+  .hero{min-height:330px;padding:28px 18px;background-image:linear-gradient(90deg,rgba(255,251,235,.96),rgba(255,251,235,.82)),url('data:image/jpeg;base64,');background-size:cover;background-position:center}
+  .hero-inner{width:100%;max-width:none}
+  .welcome{font-size:27px;margin-bottom:7px}
+  .hero h2{font-size:clamp(32px,9vw,42px);line-height:1.08;margin-bottom:12px}
+  .hero .lead{font-size:15px;line-height:1.55}
+  .hero .tagline{font-size:16px;line-height:1.35;padding:11px 18px;margin-top:17px}
+  .grid{grid-template-columns:1fr;gap:14px;margin-top:14px;padding:0 12px}
+  .card-img{height:180px}
+  .card-body{padding:17px 15px 18px}
+  .card h3{font-size:22px}
+  .sub{font-size:15px}
+  .items{font-size:14px;gap:8px;min-height:0}
+  .items li{margin:8px 0}
+  .btn{min-height:42px;padding:12px 20px}
+  .features{grid-template-columns:1fr 1fr;gap:0;padding:8px 10px;margin-top:14px}
+  .feature{justify-content:flex-start;padding:13px 8px;font-size:12px;line-height:1.4}
+  .feature b{font-size:24px}
+  .contact{grid-template-columns:1fr;gap:10px;padding:18px 12px}
+  .box{padding:8px 5px}
+  .store-img{height:200px}
+  .wa-box{padding:24px 16px}
+  .wa-box h3{font-size:24px}
+  .footer{padding:20px 14px;line-height:1.5}
+  .float{width:52px;height:52px;right:14px;bottom:14px}
+}
+@media (max-width:380px){
+  .brand h1{font-size:32px}
+  .brand h1 small{font-size:12px}
+  .brand p{font-size:10px}
+  .hero{padding:25px 15px;min-height:310px}
+  .hero h2{font-size:31px}
+  .hero .lead{font-size:14px}
+  .hero .tagline{font-size:14px;padding:10px 13px}
+  .card-img{height:155px}
+  .items{font-size:12px}
+  .features{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body>
